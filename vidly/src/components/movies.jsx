@@ -13,7 +13,10 @@ class Movies extends Component {
     }
 
     render() {
+        if (this.state.movies.length === 0) 
+            return <p> There are no movies in the database.</p>
         return <React.Fragment>
+            <p>Shwoing {this.state.movies.length} movies in the database.</p>
             <table className="table">
                 <thead>
                     <tr>
