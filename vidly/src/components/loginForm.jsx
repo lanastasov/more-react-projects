@@ -13,18 +13,25 @@ class LoginForm extends React.Component {
   };
 
   validate = () => {
-    return { username: "Username is required." };
+    const errors = {};
+    const { account } = this.state;
+    if (account.username.trim() === "")
+      errors.username = "Username is required.";
+    if (account.password.trim() === "")
+      errors.password = "Password is required.";
+    return Object.keys(errors).length === 0 ? null : errors;
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
 
     const errors = this.validate();
+    console.log(errors);
     this.setState({ errors });
     if (errors) return;
 
     // Call the server
-    const username = this.username.current.value;
+    // const username = this.username.current.value;
     console.log("submitted");
   };
 
