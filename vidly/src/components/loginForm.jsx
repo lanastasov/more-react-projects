@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Form from "./common/form";
-import Redirect from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import Joi, { errors } from "joi-browser";
 import auth from "../services/authService";
 

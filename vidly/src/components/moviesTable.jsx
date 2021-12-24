@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import auth from "../services/authServices";
+import auth from "../services/authService";
 import { Link } from "react-router-dom";
 import Table from "./common/table";
 import Like from "./common/like";
